@@ -15,7 +15,6 @@ Note: It is recommended to use an in-memory database, after all this is just an 
 ### Features
 
 1. Create an invoice
-    - Input: `InvoiceInput`
     - Output: `Invoice`
 2. Get an invoice by its ID
     - Output: `Invoice`
@@ -48,18 +47,6 @@ type Invoice {
 type InvoicePosition {
     description: String!
     amount: Float!
-}
-
-type InvoicePositionInput {
-    description: String!
-    amount: Float!
-}
-
-type InvoiceInput {
-    title: String!
-    description: String
-    customerId: UUID!
-    positions: [InvoicePositionInput!]!
 }
 ```
 
