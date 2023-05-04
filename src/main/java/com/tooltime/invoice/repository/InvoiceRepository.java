@@ -2,5 +2,11 @@ package com.tooltime.invoice.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface InvoiceRepository extends JpaRepository<Integer, InvoiceColumn> {
+import java.util.UUID;
+
+
+public interface InvoiceRepository extends JpaRepository<InvoicePersistence, UUID> {
+
+
+    InvoicePersistence fetchInvoicesBYCustomerID(UUID CustomerID);
 }

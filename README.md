@@ -21,6 +21,8 @@ Note: It is recommended to use an in-memory database, after all this is just an 
 3. Get the total amount of the current month by customer ID
     - Output: `Float`
 
+
+
 ### Type definitions
 
 Our colleague drafted the following type definitions. As he did not know what technology we might use in the end these
@@ -38,8 +40,8 @@ type Invoice {
     code: String! // human readable invoice code/number
     title: String!
     description: String
-    issuedAt: String! // ISO date time
-    customer: Customer!
+     issuedAt: String! // ISO date time
+    customer: Customer! // this needs to be the customerDAO
     positions: [InvoicePosition!]!
     totalAmount: Float!
 }
